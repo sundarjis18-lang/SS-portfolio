@@ -1,61 +1,47 @@
-# Oracle SQL*Plus Monochrome Terminal Replica
+# Sundarji S — Cybersecurity & Full-Stack Developer Portfolio
 
-An authentic, native terminal emulator and lab execution environment replicating **Oracle SQL*Plus: Release 19.0.0.0.0 (Oracle Database 19c Enterprise Edition Release 19.0.0.0.0)**.
+An interactive, responsive portfolio showcasing defensive cybersecurity capabilities, full-stack architectures, hackathon projects, and national certifications.
 
-Designed with a high-fidelity pure black & monochrome theme (`#000000`, `#141414`, `#cccccc`, `#ffffff`), interactive SQL command processor, stealth blackout mode, and preloaded lab programs 1 through 10.
+![Portfolio Banner](assets/logo.png)
 
----
+## ⚡ Tech Stack & Highlights
 
-## ⌨️ Keyboard Shortcuts & Features
+- **Frontend Core**: Semantic HTML5, Modular CSS3 (Custom Properties & Glassmorphism), Vanilla JavaScript ES6+
+- **Interactive Graphics**: [Three.js](https://threejs.org/) 3D Cyber Core Ambient Particle Canvas
+- **Design Palette**: Powder Blue (`#93c5fd`), Pure White (`#ffffff`), and Vibrant Racing Orange (`#ff5500`)
+- **Key Features**:
+  - Interactive Project Showcase with Case Studies and GitHub links
+  - Categorized Technical Skills Matrix (Cybersecurity, Development, Architecture)
+  - Interactive Certifications Gallery with modal previews and verification badges
+  - Curated Book Reading Accordion with takeaways & leadership insights
+  - Fully responsive layout across mobile, tablet, and desktop
 
-| Shortcut / Action | Description |
-| :--- | :--- |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd> | **Run & Show Program 10** (Views) directly in the terminal |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> .. <kbd>9</kbd> | Run & Show preloaded Programs 1 to 9 in the terminal |
-| Type `10` or `1` .. `9` | Type program number at `SQL> ` prompt to run it instantly |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> (or <kbd>1</kbd>..<kbd>9</kbd>) | Opens the overlay modal showing **AIM** and **ALGORITHM** for Program 10 (or 1..9) |
-| <kbd>Ctrl</kbd> + <kbd>Space</kbd> | **Stealth Mode** — Instantly blacks out the screen with cursor hidden (toggle back anytime) |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> or <kbd>Esc</kbd> | Closes the open Aim & Algorithm dialog modal |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Clears the terminal screen |
-| <kbd>↑</kbd> / <kbd>↓</kbd> | Navigates command history |
-| <kbd>Tab</kbd> | Autocompletes SQL keywords (`SELECT`, `CREATE TABLE`, `COMMIT`, `ALTER TABLE`, etc.) |
-| <kbd>Enter</kbd> | Executes SQL command (supports multi-line statements with `  2  ` until `;` or `/`) |
+## 📂 Repository Structure
 
----
-
-## 🖥️ Built-in Terminal Commands
-
-In addition to standard queries, you can type:
-- `HELP` or `?`: Displays the quick cheat sheet in the terminal.
-- `CLEAR SCREEN` or `CL SCR`: Clears terminal output history.
-- `SHOW TABLES` or `SELECT * FROM TAB`: Displays mock database tables.
-- `DESC <table_name>`: Displays column schema and datatypes.
-- `EXIT` or `QUIT`: Prints Oracle disconnection banner.
-
----
-
-## 🧪 Preloaded Programs (1 to 10)
-
-- **Program 01**: Data Manipulation and Data Definition Language (`CREATE`, `INSERT`, `SELECT`, `ALTER`, `UPDATE`)
-- **Program 02**: Transaction Control Language (`COMMIT`, `SAVEPOINT`, `ROLLBACK`)
-- **Program 03**: Logical Operations & Operators (`AND`, `OR`, `LIKE`, `NOT LIKE`, `BETWEEN`, `ALL`, `ANY`)
-- **Program 04**: Queries, Sub Queries, Nested Queries & Group By (`MAX`, `MIN`, `COUNT`, `SUM`, `AVG`)
-- **Program 05**: Set Operations (`UNION`, `UNION ALL`, `INTERSECT`, `MINUS`)
-- **Program 06**: Built-in Functions (`MIN`, `MAX`, `AVG`, `COUNT`, `ROUND`, `LENGTH`, `LOWER`)
-- **Program 07**: Rollback, Commit, and Savepoints
-- **Program 08**: Joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`)
-- **Program 09**: Triggers (`BEFORE` / `AFTER` Insert, Update, Delete with Audit Log)
-- **Program 10**: Views (`CREATE VIEW`, `CREATE OR REPLACE VIEW`, `DROP VIEW`)
-
----
-
-## 🚀 Running Locally
-
-Open [index.html](file:///c:/Users/Sundaji/Desktop/project/v/index.html) directly in any web browser, or start the local server:
-
-```bash
-node server.js
+```text
+├── index.html        # Main portfolio layout and semantic structure
+├── style.css         # Styling, dark-theme variables, animations & media queries
+├── app.js            # Particle canvas, interactive modals, accordion, and typewriter
+└── assets/           # Certificates, project banners, logos, and favicon
 ```
 
-Then visit:
-[http://localhost:3000](http://localhost:3000)
+## 🚀 Quick Start / Local Preview
+
+To view the portfolio locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/sundarjis18-lang/SS-portfolio.git
+
+# Navigate into the project folder
+cd SS-portfolio
+
+# Open index.html in your browser or run a simple local server:
+python -m http.server 8000
+```
+Then navigate to `http://localhost:8000` in your web browser.
+
+## 📬 Connect
+
+- **GitHub**: [@sundarjis18-lang](https://github.com/sundarjis18-lang/)
+- **Institution**: Sri Ramakrishna College of Arts & Science (SRCAS)

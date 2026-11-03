@@ -1,70 +1,999 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SQL*Plus: Release 19.0.0.0.0 - Oracle Database 19c</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23222222' rx='3'/%3E%3Cpath d='M8 9h16v3H8zm0 5h16v3H8zm0 5h16v3H8z' fill='%23cccccc'/%3E%3Ctext x='16' y='27' font-family='monospace' font-size='8' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESQL%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sundarji S | Cyber Security & Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Sundarji S - Defensive Cybersecurity Specialist, Full-Stack Developer, and Hackathon Competitor." />
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
+
 <body>
+  <!-- Ambient Particle Canvas -->
+  <canvas id="ambient-canvas"></canvas>
 
-  <!-- Fullscreen OS Window -->
-  <div id="window-container">
-    
-    <!-- Title Bar -->
-    <div id="title-bar">
-      <div class="title-left">
-        <div class="sqlplus-icon" title="SQL*Plus">SQL</div>
-        <div class="title-text">
-          SQL*Plus
-          <span class="version-tag">Release 19.0.0.0.0</span>
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Sundarji S Portfolio Home">
+        <img src="assets/logo.png" alt="Sundarji S - SS Logo" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Certifications</a>
+        <a href="#books" class="nav-link">Books</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/sundarjis18-lang/" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline-orange btn-sm" aria-label="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sundarji-s-b8430b374" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline-powder btn-sm" aria-label="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <!-- Cyber Status Badge -->
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span class="status-text">Sri Ramakrishna College of Arts & Science (SRCAS)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-white">Sundarji S</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">Specializing in</span>
+            <span class="typed-role" id="typed-role">Cyber Security & Full-Stack Developer</span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science student specializing in defensive cybersecurity, web app development, and system
+            architectures. Driven by competitive hackathons, leading project teams, and singing.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-racing-orange">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#achievements" class="btn btn-powder-blue">
+              <span>View Certifications</span>
+              <i class="fa-solid fa-award"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="social-strip">
+            <span class="social-label">Find me on:</span>
+            <a href="https://github.com/sundarjis18-lang/" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sundarji-s-b8430b374" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:sundarjis18@gmail.com" class="social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero 3D Interactive Cyber Core -->
+        <div class="hero-visual">
+          <div class="cyber-core-wrapper">
+            <div class="glow-orb orb-orange"></div>
+            <div class="glow-orb orb-powder"></div>
+            <canvas id="hero-3d-canvas"></canvas>
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-shield-halved text-orange"></i>
+              <span>Defensive Security</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-code text-powder"></i>
+              <span>Full-Stack Architecture</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="title-controls">
-        <button class="win-btn" id="btn-minimize" title="Minimize / Blank Screen">─</button>
-        <button class="win-btn" id="btn-maximize" title="Maximize (Fullscreen)">□</button>
-        <button class="win-btn close-btn" id="btn-close" title="Exit">✕</button>
+    </section>
+
+    <!-- Key Stats Section -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap orange-glow">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <h3 class="stat-label">Years of Coding & Security Research</h3>
+            <p class="stat-desc">Continuous focus on defensive cybersecurity, static vulnerability analysis, and robust
+              backend engineering.</p>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap powder-glow">
+              <i class="fa-solid fa-cubes-stacked"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <h3 class="stat-label">Full-Stack & Cyber Security Projects</h3>
+            <p class="stat-desc">Production web applications, CTF platforms, self-healing platforms, and dynamic
+              telemetry systems.</p>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap orange-glow">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <h3 class="stat-label">Hackathons & Verified Credentials</h3>
+            <p class="stat-desc">ISRO national space hackathon, Karpagam finalist, GDG CTF, full-stack workshop & youth
+              dialogues.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-terminal text-orange"></i>
+            <span>WHO I AM</span>
+          </div>
+          <h2 class="section-title">Driven by Curiosity, <span class="highlight-orange">Secured</span> by Design</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card with User Photo -->
+          <div class="about-photo-wrapper">
+            <div class="photo-card-glass">
+              <div class="photo-corner corner-tl"></div>
+              <div class="photo-corner corner-tr"></div>
+              <div class="photo-corner corner-bl"></div>
+              <div class="photo-corner corner-br"></div>
+              <div class="photo-inner">
+                <img src="assets/profile.jpg" alt="Sundarji S - Cyber Security & Full-Stack Developer"
+                  class="profile-img" />
+                <div class="photo-scanline"></div>
+              </div>
+              <div class="photo-meta">
+                <div class="meta-item">
+                  <span class="meta-label">INSTITUTION</span>
+                  <span class="meta-value text-powder">SRCAS COIMBATORE</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">FOCUS</span>
+                  <span class="meta-value text-orange">DEFENSIVE CYBER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Details -->
+          <div class="about-details">
+            <h3 class="about-subtitle">
+              Building resilient systems at the intersection of <span class="text-powder">Modern Web</span> and <span
+                class="text-orange">Defensive Security</span>.
+            </h3>
+
+            <p class="about-text">
+              I am a Computer Science student at <strong>Sri Ramakrishna College of Arts and Science (SRCAS)</strong>,
+              specializing in defensive cybersecurity, web app development, and resilient system architectures. I love
+              dissecting complex problems down to their lowest layer — whether that is hardening endpoints, auditing
+              cryptographic implementations, or designing low-latency REST microservices.
+            </p>
+
+            <p class="about-text">
+              Beyond software engineering, I actively compete in high-stakes hackathons, national space initiatives, and
+              CTF challenges — from contributing real-world space solutions in ISRO's <strong>Bharatiya Antariksh
+                Hackathon 2026</strong> to leading <em>Sprint X Coders</em> to the finals of Karpagam Hacksprint 2.0. I
+              am also fascinated by acoustics, exploring the synthesis of sound via the Web Audio API and digital signal
+              processing.
+            </p>
+
+            <!-- Focus Pills -->
+            <div class="focus-pills">
+              <div class="pill">
+                <i class="fa-solid fa-shield-virus text-orange"></i>
+                <span>Defensive Cybersecurity</span>
+              </div>
+              <div class="pill">
+                <i class="fa-solid fa-layer-group text-powder"></i>
+                <span>Full-Stack Web Architecture</span>
+              </div>
+              <div class="pill">
+                <i class="fa-solid fa-flag-checkered text-orange"></i>
+                <span>CTFs & Hackathons</span>
+              </div>
+              <div class="pill">
+                <i class="fa-solid fa-lock text-powder"></i>
+                <span>Cryptography (AES-CBC / RSA / JWT)</span>
+              </div>
+              <div class="pill">
+                <i class="fa-solid fa-microphone text-orange"></i>
+                <span>Singer</span>
+              </div>
+              <div class="pill">
+                <i class="fa-solid fa-users-gear text-powder"></i>
+                <span>Project Team Leadership</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-racing-orange">
+                <span>Get In Touch</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </a>
+              <a href="https://github.com/sundarjis18-lang/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-powder">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Repositories</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-laptop-code text-powder"></i>
+            <span>FEATURED WORK</span>
+          </div>
+          <h2 class="section-title">Core <span class="highlight-powder">Projects</span> & Engineering</h2>
+          <p class="section-subtitle">Real-world applications in cybersecurity, autonomous infrastructure, dynamic
+            telemetry, and AI systems.</p>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+
+          <!-- Project 1: SRCAS Cyber Club CTF Platform -->
+          <div class="project-card">
+            <div class="project-banner project-banner-image">
+              <img src="assets/project_ctf.jpg" alt="SRCAS Cyber Club CTF Platform Cover" class="project-cover-img" />
+              <div class="project-banner-overlay"></div>
+              <div class="project-tech-badge">Cybersecurity • CTF</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SRCAS Cyber Club CTF Platform</h3>
+              <p class="project-desc">
+                Custom Capture The Flag (CTF) challenge suite built for college cybersecurity events. Features web
+                security exploits, JWT authentication bypass vulnerabilities, and AES-CBC cryptographic decoding
+                challenges.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Node.js</span>
+                <span>AES-CBC</span>
+                <span>JWT Auth</span>
+                <span>Docker</span>
+                <span>Linux</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sundarjis18-lang/CTF" target="_blank" rel="noopener noreferrer"
+                  class="project-btn demo-btn">
+                  <i class="fa-brands fa-github"></i> View GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AI-Powered Work Order & Job Management Platform -->
+          <div class="project-card">
+            <div class="project-banner project-banner-image">
+              <img src="assets/project_hacksprint_ai.jpg" alt="AI-Powered Job & Work Order Platform Cover" class="project-cover-img" />
+              <div class="project-banner-overlay"></div>
+              <div class="project-tech-badge">AI & Cloud • Hackathon Finalist</div>
+            </div>
+            <div class="project-body">
+              <div class="project-header-meta">
+                <span class="badge-role">Team Leader — Sprint X Coders</span>
+              </div>
+              <h3 class="project-title">AI-Powered Job & Work Order Platform</h3>
+              <p class="project-desc">
+                Decoupled AI ecosystem orchestrating workforce operations. Implements automated contractor dispatch
+                matching, geo-fenced "Live Progress Proof" to eliminate fraud, predictive overrun analysis, and TLS 1.3
+                zero-trust security.
+              </p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>FastAPI (Python)</span>
+                <span>Supabase</span>
+                <span>PostgreSQL RLS</span>
+                <span>TLS 1.3</span>
+              </div>
+              <div class="project-links">
+                <a href="assets/Hacksprint_2.0_Case_Study.pdf" target="_blank" class="project-btn demo-btn">
+                  <i class="fa-solid fa-file-pdf"></i> Read Case Study PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: RAIL-GATHI -->
+          <div class="project-card">
+            <div class="project-banner project-banner-image">
+              <img src="assets/project_railgathi_banner.jpg" alt="RAIL-GATHI Dynamic Train ETA Cover" class="project-cover-img" />
+              <div class="project-banner-overlay"></div>
+              <div class="project-tech-badge">Full-Stack • Telemetry</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">RAIL-GATHI: Dynamic Train ETA Prediction</h3>
+              <p class="project-desc">
+                Real-time train arrival forecasting system integrating live telemetry sensors and IMD meteorological
+                weather data to deliver dynamic, high-accuracy transit arrival estimates.
+              </p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Python (FastAPI)</span>
+                <span>PostgreSQL</span>
+                <span>Telemetry APIs</span>
+                <span>IMD Weather</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: AutoHeal -->
+          <div class="project-card">
+            <div class="project-banner">
+              <div class="project-tech-badge">DevSecOps • Resilience</div>
+              <div class="project-icon-box">
+                <i class="fa-solid fa-heart-pulse text-powder"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AutoHeal: System Self-Healing Architecture</h3>
+              <p class="project-desc">
+                Autonomous infrastructure monitoring platform that continuously detects system faults, resource
+                bottlenecks, and network anomalies, executing automated self-healing scripts without downtime.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Docker</span>
+                <span>Linux Shell</span>
+                <span>Node.js</span>
+                <span>System Monitoring</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Tools & Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-microchip text-orange"></i>
+            <span>EXPERTISE</span>
+          </div>
+          <h2 class="section-title">Tools & Technical <span class="highlight-orange">Proficiencies</span></h2>
+          <p class="section-subtitle">Deep dive into my defensive cybersecurity toolkit, engineering stack, and
+            architectural domains.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Category 1: Penetration Testing & Security Tools -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-shield-halved text-orange"></i>
+              <h3>Security & Penetration Tools</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-orange"><i class="fa-solid fa-spider"></i> Burp Suite</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-network-wired"></i> Wireshark</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-crosshairs"></i> Nmap</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-skull"></i> Metasploit</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-shield-virus"></i> Static Vulnerability Audits</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-bug"></i> Malware & Reverse Engineering</span>
+            </div>
+            <div class="category-divider"></div>
+            <h4 class="category-subhead">Systems & Hardening</h4>
+            <div class="skill-chips">
+              <span class="chip"><i class="fa-brands fa-linux"></i> Linux Administration</span>
+              <span class="chip"><i class="fa-solid fa-terminal"></i> Shell & Bash Scripting</span>
+              <span class="chip"><i class="fa-solid fa-server"></i> UNIX OS Internals</span>
+              <span class="chip"><i class="fa-solid fa-fire"></i> Firewall Configuration</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Cryptographic & Defensive Concepts -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-key text-powder"></i>
+              <h3>Cryptographic & Defensive Concepts</h3>
+            </div>
+            <ul class="skill-list-compact">
+              <li>
+                <div class="skill-item-info">
+                  <strong>Cryptographic Protocols</strong>
+                  <span>AES-CBC, RSA, Public-Key Infrastructure</span>
+                </div>
+                <div class="skill-meter"><i style="width: 90%"></i></div>
+              </li>
+              <li>
+                <div class="skill-item-info">
+                  <strong>Token Security & Authentication</strong>
+                  <span>JWT Signature Validation & Exploitation Defense</span>
+                </div>
+                <div class="skill-meter"><i style="width: 92%"></i></div>
+              </li>
+              <li>
+                <div class="skill-item-info">
+                  <strong>Network Penetration & Defense</strong>
+                  <span>Protocol analysis, Port Auditing, Zero-Trust</span>
+                </div>
+                <div class="skill-meter"><i style="width: 86%"></i></div>
+              </li>
+              <li>
+                <div class="skill-item-info">
+                  <strong>Secure API & Architecture Design</strong>
+                  <span>OWASP Top 10 mitigation, Role-Based Access (RLS)</span>
+                </div>
+                <div class="skill-meter"><i style="width: 88%"></i></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Programming & Full-Stack Development -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-laptop-code text-orange"></i>
+              <h3>Languages & Full-Stack Stack</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-powder"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="chip chip-powder"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+              <span class="chip chip-powder"><i class="fa-solid fa-c"></i> C Language</span>
+              <span class="chip chip-powder"><i class="fa-brands fa-react"></i> React</span>
+              <span class="chip chip-powder"><i class="fa-brands fa-node-js"></i> Node.js & Express</span>
+              <span class="chip chip-powder"><i class="fa-solid fa-bolt"></i> FastAPI & Flask</span>
+              <span class="chip chip-powder"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="chip chip-powder"><i class="fa-solid fa-database"></i> PostgreSQL & Supabase</span>
+              <span class="chip chip-powder"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+              <span class="chip chip-powder"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+              <span class="chip chip-orange"><i class="fa-solid fa-wave-square"></i> Canvas / Web Audio DSP</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-trophy text-orange"></i>
+            <span>CREDENTIALS</span>
+          </div>
+          <h2 class="section-title">Certifications & <span class="highlight-orange">Achievements</span></h2>
+          <p class="section-subtitle">Verified competitive milestones in national space hackathons, capture-the-flag
+            competitions, full-stack workshops, and innovation initiatives.</p>
+        </div>
+
+        <div class="achievements-grid">
+
+          <!-- Achievement 1: Bharatiya Antariksh Hackathon 2026 (ISRO) -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_bah_isro.png', 'Bharatiya Antariksh Hackathon 2026 — ISRO & Hack2skill', 'Certificate of Participation presented to Sundarji S in recognition of participation and successful idea submission solving real-world space challenges in the Bharatiya Antariksh Hackathon 2026, presented by the Indian Space Research Organisation (ISRO) and powered by Hack2skill. Certificate ID: 2026H2S06BAH-P39456.', 'assets/cert_bah_isro.pdf')">
+            <div class="cert-image-container">
+              <img src="assets/cert_bah_isro.png" alt="Bharatiya Antariksh Hackathon 2026 Certificate"
+                class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge orange-badge">National Space Hackathon</div>
+              <h3 class="cert-title">Bharatiya Antariksh Hackathon 2026</h3>
+              <p class="cert-org"><i class="fa-solid fa-rocket"></i> Indian Space Research Organisation (ISRO) &
+                Hack2skill</p>
+              <p class="cert-meta">Recognized for: <strong>Space Challenges Innovation & Real-World Idea
+                  Submission</strong> • ID: 2026H2S06BAH-P39456</p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/cert_bah_isro.pdf" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-file-pdf"></i> Official PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 2: Karpagam Hacksprint 2.0 -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_hacksprint.jpg', '2nd National Level 36-Hour Hackathon — HACKSPRINT 2.0 Finalist', 'Department of Computer Science & Engineering, Karpagam Academy of Higher Education with Cognizant, StartupTN & DST NIDHI. Led team Sprint X Coders to the finals.', 'assets/Hacksprint_2.0_Case_Study.pdf')">
+            <div class="cert-image-container">
+              <img src="assets/cert_hacksprint.jpg" alt="Hacksprint 2.0 Finalist Certificate" class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge orange-badge">National Hackathon Finalist</div>
+              <h3 class="cert-title">Hacksprint 2.0 (36-Hour Hackathon)</h3>
+              <p class="cert-org"><i class="fa-solid fa-building-columns"></i> Karpagam Academy of Higher Education</p>
+              <p class="cert-meta">Partners: <strong>Cognizant, StartupTN, DST NIDHI</strong> • Jan 21-22, 2026</p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/Hacksprint_2.0_Case_Study.pdf" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-file-pdf"></i> Case Study PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 3: GDG Capture The Flag 2026 -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_gdg_ctf.png', 'Google Developer Group — GDG Capture The Flag 2026', 'Certificate of Appreciation presented to Sundarji S for exceptional performance in cybersecurity, problem solving, and ethical hacking organized by GDG on Campus KSRCE.', 'assets/cert_gdg_ctf.pdf')">
+            <div class="cert-image-container">
+              <img src="assets/cert_gdg_ctf.png" alt="GDG Capture The Flag 2026 Certificate" class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge powder-badge">Cybersecurity Competition</div>
+              <h3 class="cert-title">GDG Capture The Flag 2026 (GDG CTF)</h3>
+              <p class="cert-org"><i class="fa-brands fa-google"></i> Google Developer Group on Campus KSRCE</p>
+              <p class="cert-meta">Certified for: <strong>Ethical Hacking, Problem Solving & Cyber Defense</strong></p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/cert_gdg_ctf.pdf" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-file-arrow-down"></i> PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 4: Scalable Full-Stack Development Workshop -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_fullstack_workshop.jpg', 'Scalable Full-Stack Development Workshop — SRCAS & App Crafters Club', 'Certificate of Participation presented to Sundarji S for successfully completing an intensive hands-on practical workshop focused on scalable full-stack web architecture and application development at Sri Ramakrishna College of Arts & Science.')">
+            <div class="cert-image-container">
+              <img src="assets/cert_fullstack_workshop.jpg" alt="Scalable Full-Stack Development Workshop Certificate"
+                class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge powder-badge">Technical Workshop</div>
+              <h3 class="cert-title">Scalable Full-Stack Development Workshop</h3>
+              <p class="cert-org"><i class="fa-solid fa-graduation-cap"></i> SRCAS Dept. of Computer Applications & App
+                Crafters Club</p>
+              <p class="cert-meta">Completed: <strong>Hands-on Training in Scalable Full-Stack Architecture & Web
+                  Development</strong></p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/cert_fullstack_workshop.jpg" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-image"></i> HD Asset
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 5: RVS College Ideathon -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_ideathon_rvs.jpg', 'Young Innovators Ideathon — YII 2026', 'Intercollegiate Innovation Competition presented by School of Computer Studies, RVS College of Arts and Science, Coimbatore in collaboration with Sanskriti University, UP.')">
+            <div class="cert-image-container">
+              <img src="assets/cert_ideathon_rvs.jpg" alt="Young Innovators Ideathon 2026 Certificate"
+                class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge orange-badge">Innovation Competition</div>
+              <h3 class="cert-title">Young Innovators Ideathon (YII 2026)</h3>
+              <p class="cert-org"><i class="fa-solid fa-lightbulb"></i> RVS College of Arts and Science & Sanskriti
+                University</p>
+              <p class="cert-meta">Presented: <strong>Innovation Showcase</strong> • Jan 7-9, 2026</p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/cert_ideathon_rvs.jpg" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-image"></i> HD Asset
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 6: Viksit Bharat Young Leaders Dialogue (VBYLD) 2027 -->
+          <div class="cert-card"
+            onclick="openCertModal('assets/cert_vbyld_quiz.jpg', 'Viksit Bharat Young Leaders Dialogue (VBYLD) 2027 — Ministry of Youth Affairs & Sports', 'Certificate of Participation presented to Sundarji S by the Ministry of Youth Affairs & Sports (MYBharat), Government of India, for successfully participating in the national youth leadership online quiz initiative on September 18, 2026.')">
+            <div class="cert-image-container">
+              <img src="assets/cert_vbyld_quiz.jpg" alt="Viksit Bharat Young Leaders Dialogue Certificate"
+                class="cert-thumb" />
+              <div class="cert-overlay">
+                <span class="cert-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge powder-badge">National Youth Initiative</div>
+              <h3 class="cert-title">Viksit Bharat Young Leaders Dialogue (VBYLD)</h3>
+              <p class="cert-org"><i class="fa-solid fa-landmark"></i> Ministry of Youth Affairs & Sports (MYBharat)</p>
+              <p class="cert-meta">Recognized for: <strong>National Youth Leadership Online Quiz Initiative</strong> •
+                Sept 18, 2026</p>
+              <div class="cert-actions">
+                <button class="btn-cert-preview">View Certificate</button>
+                <a href="assets/cert_vbyld_quiz.jpg" target="_blank" class="cert-doc-link"
+                  onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-image"></i> HD Asset
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="books-section" id="books">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-book-bookmark text-orange"></i>
+            <span>LITERATURE & INTELLECT</span>
+          </div>
+          <h2 class="section-title">Books & <span class="highlight-orange">Reading</span></h2>
+          <p class="section-subtitle">Transformative literature and autobiographies that cultivate discipline,
+            leadership, and resilience.</p>
+        </div>
+
+        <div class="simple-books-wrapper">
+          <div class="simple-book-card" data-tilt onclick="openBooksModal()">
+            <div class="simple-book-banner">
+              <div class="book-category-badge orange-badge">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Literature</span>
+              </div>
+              <div class="simple-book-icon-wrap">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+            </div>
+
+            <div class="simple-book-body">
+              <div class="simple-book-meta">
+                <span class="badge-activity-type"><i class="fa-solid fa-bookmark"></i> Curated Reading List</span>
+              </div>
+
+              <h3 class="simple-book-title">Books</h3>
+
+              <p class="simple-book-desc">
+                Curated collection of impactful books and autobiographies that shape my mindset, engineering discipline,
+                and leadership philosophy. Click to explore the books I've read and their key takeaways.
+              </p>
+
+              <div class="simple-book-action">
+                <div class="simple-book-hint">
+                  <i class="fa-solid fa-hand-pointer text-orange"></i>
+                  <span>Click to view book list</span>
+                </div>
+                <button class="btn btn-racing-orange btn-sm" onclick="event.stopPropagation(); openBooksModal();">
+                  <i class="fa-solid fa-book-open"></i> View Books
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="section-tag">
+                <i class="fa-solid fa-envelope-open-text text-orange"></i>
+                <span>GET IN TOUCH</span>
+              </div>
+              <h2 class="contact-heading">Let's build something <span class="highlight-orange">exceptional</span> and
+                secure.</h2>
+              <p class="contact-subtext">
+                Whether you have an upcoming hackathon, security initiative, software engineering role, or sound
+                synthesis collaboration, feel free to reach out directly.
+              </p>
+
+              <div class="contact-details-list">
+                <div class="contact-item">
+                  <div class="contact-icon orange-glow"><i class="fa-solid fa-user-astronaut"></i></div>
+                  <div>
+                    <span class="contact-item-label">NAME</span>
+                    <span class="contact-item-val">Sundarji S</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon powder-glow"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <span class="contact-item-label">EMAIL ADDRESS</span>
+                    <a href="mailto:sundarjis18@gmail.com" class="contact-item-val">sundarjis18@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon orange-glow"><i class="fa-brands fa-linkedin-in"></i></div>
+                  <div>
+                    <span class="contact-item-label">LINKEDIN</span>
+                    <a href="https://www.linkedin.com/in/sundarji-s-b8430b374" target="_blank" rel="noopener noreferrer"
+                      class="contact-item-val">linkedin.com/in/sundarji-s-b8430b374</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon powder-glow"><i class="fa-brands fa-github"></i></div>
+                  <div>
+                    <span class="contact-item-label">GITHUB</span>
+                    <a href="https://github.com/sundarjis18-lang/" target="_blank" rel="noopener noreferrer"
+                      class="contact-item-val">github.com/sundarjis18-lang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contact-form" action="mailto:sundarjis18@gmail.com" method="POST"
+                enctype="text/plain">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="Name" placeholder="John Doe" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="Email" placeholder="john@example.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="Message" rows="4"
+                    placeholder="Hi Sundarji, I came across your portfolio and would love to collaborate..."
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn btn-racing-orange btn-block">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Certificate Modal -->
+  <div class="cert-modal" id="cert-modal" onclick="closeCertModal()">
+    <div class="cert-modal-content" onclick="event.stopPropagation()">
+      <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close certificate modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="cert-modal-image-wrap">
+        <img id="cert-modal-img" src="" alt="Certificate Preview" />
+      </div>
+      <div class="cert-modal-details">
+        <h3 id="cert-modal-title"></h3>
+        <p id="cert-modal-desc"></p>
+        <div class="cert-modal-actions-wrap" style="display: flex; gap: 0.85rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          <a id="cert-modal-open-link" href="" target="_blank" class="btn btn-powder-blue btn-sm">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open High-Res Asset
+          </a>
+          <a id="cert-modal-pdf-link" href="" target="_blank" class="btn btn-outline-orange btn-sm"
+            style="display: none;">
+            <i class="fa-solid fa-file-pdf"></i> View Official Document (PDF)
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- Terminal Output & Interactive Area -->
-    <div id="terminal">
-      <div id="terminal-history"></div>
-      
-      <!-- Live Command Prompt -->
-      <div id="active-prompt-row">
-        <span class="prompt-label" id="prompt-label">SQL&gt; </span>
-        <span id="rendered-input"></span><span class="cursor-block"></span>
-        <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus />
-      </div>
-    </div>
-
   </div>
 
-  <!-- Terminal-Native Overlay Dialog (Ctrl + 1..10) -->
-  <div id="terminal-modal-overlay">
-    <div class="terminal-modal">
-      <div class="modal-header">
-        <div class="modal-title" id="modal-program-title">PROGRAM 01</div>
+  <!-- Books I Have Read Modal -->
+  <div class="cert-modal" id="books-modal" onclick="closeBooksModal()">
+    <div class="cert-modal-content book-modal-content" onclick="event.stopPropagation()">
+      <button class="cert-modal-close" onclick="closeBooksModal()" aria-label="Close books modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="book-modal-header">
+        <div class="book-modal-icon">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <div>
+          <span class="badge-activity-type"><i class="fa-solid fa-bookmark"></i> Curated Reading List</span>
+          <h2 class="book-modal-title">Books I Have Read</h2>
+          <p class="book-modal-author">Click on any book name to view its detailed synopsis and key takeaways</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="modal-section">
-          <div class="modal-section-title">AIM</div>
-          <div class="modal-aim" id="modal-aim-text"></div>
+
+      <div class="book-modal-body">
+
+        <!-- Interactive Books List (Click Book Name -> Show Description) -->
+        <div class="books-interactive-list">
+
+          <!-- Book 1: Wings of Fire -->
+          <div class="book-list-item" id="book-wings-of-fire">
+            <div class="book-item-header" onclick="toggleBookDescription('book-wings-of-fire')">
+              <div class="book-item-left">
+                <div class="book-mini-icon">
+                  <i class="fa-solid fa-book"></i>
+                </div>
+                <div class="book-title-meta">
+                  <h4 class="book-item-name">Wings of Fire</h4>
+                  <span class="book-item-sub"><i class="fa-solid fa-user-pen text-orange"></i> Dr. A.P.J. Abdul Kalam
+                    with Arun Tiwari</span>
+                </div>
+              </div>
+              <div class="book-item-right">
+                <span class="book-genre-pill">Autobiography</span>
+                <i class="fa-solid fa-chevron-down book-chevron"></i>
+              </div>
+            </div>
+
+            <!-- Description & Takeaways Drawer -->
+            <div class="book-item-drawer">
+              <div class="book-drawer-inner">
+
+                <div class="book-section-card">
+                  <h5 class="book-section-heading">
+                    <i class="fa-solid fa-circle-info text-powder"></i> About the Book
+                  </h5>
+                  <p>
+                    <em>Wings of Fire</em> is an inspiring autobiography of <strong>Dr. A.P.J. Abdul Kalam</strong>. It
+                    describes his journey from a humble childhood in Rameswaram to becoming a renowned scientist and the
+                    President of India. The book highlights his struggles, achievements, leadership, and dedication to
+                    serving the nation.
+                  </p>
+                </div>
+
+                <div class="book-pillars-grid">
+                  <div class="pillar-item">
+                    <i class="fa-solid fa-rocket text-powder"></i>
+                    <h5>Tenacity & Engineering</h5>
+                    <p>Overcoming initial launch failures to pioneer ISRO's satellite launch systems and strategic
+                      defense architectures.</p>
+                  </div>
+                  <div class="pillar-item">
+                    <i class="fa-solid fa-compass text-orange"></i>
+                    <h5>Leadership & Accountability</h5>
+                    <p>Leading multidisciplinary scientific teams with absolute trust, humility, and owning failure
+                      while celebrating the team's success.</p>
+                  </div>
+                  <div class="pillar-item">
+                    <i class="fa-solid fa-seedling text-powder"></i>
+                    <h5>Humility & National Service</h5>
+                    <p>Remaining rooted in modesty, continuous learning, and selfless commitment to building a
+                      self-reliant nation.</p>
+                  </div>
+                </div>
+
+                <div class="activity-takeaway-card modal-takeaway">
+                  <div class="takeaway-label">
+                    <i class="fa-solid fa-lightbulb"></i> My Biggest Takeaway
+                  </div>
+                  <p>
+                    “This book taught me that dreams become reality through hard work, discipline, and determination.
+                    Failures are not the end but opportunities to learn and grow. It inspired me to believe in myself,
+                    stay humble, and never stop pursuing my goals.”
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="modal-section">
-          <div class="modal-section-title">ALGORITHM</div>
-          <ul class="modal-algo-list" id="modal-algo-list"></ul>
+
+        <!-- Shelf note -->
+        <div class="books-shelf-note">
+          <i class="fa-solid fa-circle-info text-powder"></i>
+          <span>Clicking a book title above toggles its detailed overview and takeaways. More reads will be added as I
+            continue exploring new titles.</span>
         </div>
+
+      </div>
+
+      <div class="book-modal-footer">
+        <button class="btn btn-glass btn-sm" onclick="closeBooksModal()">Close Window</button>
       </div>
     </div>
   </div>
 
-  <!-- Stealth Blackout Overlay (Ctrl + Space) -->
-  <div id="stealth-overlay"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo-link" aria-label="Sundarji S - Back to top">
+          <img src="assets/logo.png" alt="Sundarji S - SS Logo" class="footer-logo-img" />
+        </a>
+        <p class="footer-tagline">Cyber Security & Full-Stack Developer • Sri Ramakrishna College of Arts & Science</p>
+      </div>
 
-  <!-- JavaScript Engine -->
-  <script src="script.js"></script>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Certifications</a>
+        <a href="#books">Books</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sundarji S. Designed with <span class="heart-pulse">❤️</span> in Powder Blue, Pure White & Vibrant
+          Racing Orange.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js CDN for 3D Cyber Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
