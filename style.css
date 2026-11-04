@@ -1847,7 +1847,7 @@ body {
 }
 
 .book-list-item.active .book-item-drawer {
-  max-height: 900px;
+  max-height: 1400px;
   opacity: 1;
   border-top-color: rgba(147, 197, 253, 0.15);
 }
